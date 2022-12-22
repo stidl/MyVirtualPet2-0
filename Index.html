@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>My Virtual Pet</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=K2D:wght@400;500;700&family=Play&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Custom scripts -->
+  <script src="./js/scripts.js" type="module"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="container my-5">
+
+    <!-- START SCREEN -->
+    <div class="startScreenContainer">
+      <div class="header">
+      <img class="titleImage" id="titleImage" src="/Title.png" alt="MyVirtualPet" width="300" height="auto" />
+    </div>
+
+    <div class="PetNameInput" id="PetNameInput">
+      <input type="text" id="petName" name="petName" placeholder="Your Pet Name" maxlength = "15">
+    </div>
+
+    <div class="character-picker">
+      <input type="image" class="arrowLeft" id="arrowLeft" src="/arrow.png" alt="Arrow left" />
+      <div class="pet" id="pet">
+        <img class="pet1Happy" id="pet1Happy" src="/pet1Happy.gif" alt="Pet" width="auto" height="210"/>
+      </div>
+      <input type="image" class="arrowRight" id="arrowRight" src="/arrow.png" alt="Arrow right" />
+    </div>
+
+    <div class="mode-picker">
+      <div class="survival-mode-cont">
+        <input type="image" class="Survival-Mode-Icon" id="Survival-Mode-Icon" src="/Survival-Mode.png" alt="Survival-Mode" width="56" height="56"/>
+        <h3>Survival Mode</h2>
+      </div>
+      <div class="quiz-mode-cont">
+        <input type="image" class="Quiz-Mode-Icon" id="Quiz-Mode-Icon" src="/Quiz-Mode.png" alt="Quiz-Mode" />
+        <h3>Quiz Mode</h2>
+      </div>
+    </div>
+
+    <div class="startscreen-buttons">
+      <button class="descriptionBtn" id="showDescriptionBtn" type="button" > Instructions</button>
+      <button class="confirmBtn" id="confirmBtn" type="button" value="Confirm"> Confirm</button>
+      <button class="BtnLoad" id="BtnLoad" type="button" value="Load Game"> Load Game</button>
+    </div>
+
+    </div>
+
+     <!-- INSTRUCTIONS -->
+    <div class="instructions" id="gameInstructions">
+      <img src="./img/Instructions.png" class="instructionsImage" id="instructionsImage" alt="Instructions" />
+      <button class="backToStartScreen" id="backToStartScreenBtn" type="button" width="50px" >Zurück</button>
+    </div>
+
+    <!-- Shotglass Wrong Answer Overlay Loose Life-->
+    <div class="cards" style="visibility: hidden">
+      <div class="overlay-card" id="wrongAnswer">
+        <img src="./img/Sad.gif" class="card-img-top" alt="Shotglass Gif" />
+      </div>
+
+      <!-- Phone Wrong Answer Overlay Loose Time-->
+      <div class="overlay-card" id="wrongAnswer2">
+        <img src="./img/wrongAnswer.gif" class="card-img-top" alt="Phone Gif" />
+      </div>
+    </div>
+
+    <!-- QUIZ GAME -->
+    <div class="gameContainer" id="gameContainer">
+    
+
+      <div class="needBars" id="needBars">
+
+        <div class="hunger">
+          <img class="hungerIcon" id="hungerIcon" src="/Hunger-Icon.png" alt="Hunger Icon"/>
+          <label>
+            <progress id="HungerBarQuiz" class="HungerBar" value="100" min="0" max="100"></progress>
+            <span class="value"></span>
+          </label>
+        </div>
+        
+        <div class="fun">
+          <img class="funIcon" id="funIcon" src="/Fun-Icon.png" alt="Fun Icon"/>
+          <label>
+            <progress id="FunBarQuiz" value="100" min="0" max="100"></progress>
+            <span class="value"></span>
+          </label>
+        </div>
+        
+        <div class="hygiene">
+          <img class="hygieneIcon" id="hygieneIcon" src="/Hygiene-Icon.png" alt="Hygiene Icon"/>
+          <label>
+            <progress id="HygieneBarQuiz" value="100" min="0" max="100"></progress>
+            <span class="value"></span>
+          </label>
+        </div>
+        
+        <div class="energy">
+          <img class="energyIcon" id="energyIcon" src="/Energy-Icon.png" alt="Energy Icon"/>
+          <label>
+            <progress id="EnergyBarQuiz" value="100" min="min" max="100"></progress>
+            <span class="value"></span>
+          </label>
+        </div>
+        
+        <div id="introQuiz">
+          <label class="petNameOutput" id="petNameOutput"></label>
+          <div class="timer">
+            <h1 id="countdown"></h1>
+          </div>
+        </div>
+
+        </div>
+
+       
+
+      <div class="character-holder">
+        <img class="quizPetHappy" id="quizPetHappy" src="/pet1happy.gif" alt="Pet" width="auto" height="210"/>
+      </div>
+
+      <div class="question-holder-row">
+        <div class="col-12">
+          <h1 id="question">What is the answer to this question?</h1>
+        </div>
+      </div>
+
+      <div class="answers-box1">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="answer-container card">
+            <p class="answer-prefix"></p>
+            <p class="answer-text" data-answer="a">Answer A</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="answer-container card">
+            <p class="answer-prefix"></p>
+            <p class="answer-text" data-answer="b">Answer B</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="answers-box2">
+
+      <div class="row">
+        <div class="col-12">
+          <div class="answer-container card">
+            <p class="answer-prefix"></p>
+            <p class="answer-text" data-answer="c">Answer C</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="answer-container card">
+            <p class="answer-prefix"></p>
+            <p class="answer-text" data-answer="d">Answer D</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SURVIVAL GAME -->
+  <div class="survival-mode-game" id="survival-mode-game">
+
+  <div class="needBars" id="needBars">
+    <div class="hunger">
+      <img class="hungerIcon" id="hungerIcon" src="/Hunger-Icon.png" alt="Hunger Icon"/>
+      <label>
+        <progress id="HungerBar" class="HungerBar" value="100" min="0" max="100"></progress>
+        <span class="value"></span>
+      </label>
+    </div>
+    
+    <div class="fun">
+      <img class="funIcon" id="funIcon" src="/Fun-Icon.png" alt="Fun Icon"/>
+      <label>
+        <progress id="FunBar" value="100" min="0" max="100"></progress>
+        <span class="value"></span>
+      </label>
+    </div>
+    
+    <div class="hygiene">
+      <img class="hygieneIcon" id="hygieneIcon" src="/Hygiene-Icon.png" alt="Hygiene Icon"/>
+      <label>
+        <progress id="HygieneBar" value="100" min="0" max="100"></progress>
+        <span class="value"></span>
+      </label>
+    </div>
+    
+    <div class="energy">
+      <img class="energyIcon" id="energyIcon" src="/Energy-Icon.png" alt="Energy Icon"/>
+      <label>
+        <progress id="EnergyBar" value="100" min="min" max="100"></progress>
+        <span class="value"></span>
+      </label>
+    </div>
+    
+    <div id="intro">
+      <div class="timer">
+        <h1 id="countdownSurvive"></h1>
+        </div>
+      <label class="petNameOutput" id="petNameOutputSurv"></label>
+      <button class="saveBtn" id="saveBtn" type="button" >Save</button>
+    </div>
+
+    </div>
+
+    <div class="bubbles">
+      <div class="food-bubble">
+        <img class="food-image" id="food-image1" src="/fast-food.png" alt="food bubble" width="70" height="70"/>
+      </div>
+      
+      <div class="play-bubble">
+        <img class="play-image" id="play-image1"src="/puzzle.png" alt="play bubble" width="70" height="70"/>
+      </div>
+      
+      <div class="bath-bubble">
+        <img class="bath-image" id="bath-image1" src="/bathtub.png" alt="bath bubble" width="70" height="70"/>
+      </div>
+      
+      <div class="sleep-bubble">
+        <img class="sleep-image" id="sleep-image1" src="/sleep.png" alt="sleep bubble" width="70" height="70"/>
+          </div> 
+      
+      </div>
+
+  <div class="character-holder">
+    <img class="quizPetHappy" id="Pet1Happy" src="/pet1happy.gif" alt="Pet" width="auto" height="210"/>
+  </div>
+
+  
+    <div class="pressNeedText">
+      <h1 id="question">Press to fill Needs:</h1>
+    </div>
+
+    <div class="needs-button-holder">
+      <div class="hunger-btn-cont">
+        <input type="image" class="BtnHunger" id="BtnHunger" src="/Feed-Btn.png" alt="Feed Button" />
+      <h3>Feed</h2>
+      </div>
+      
+      <div class="play-btn-cont">
+        <input type="image" class="BtnFun" id="BtnFun" src="/Play-Btn.png" alt="Play Button" />
+        <h3>Play</h2>
+      </div>
+      
+      <div class="clean-btn-cont">
+        <input type="image" class="BtnHygiene" id="BtnHygiene" src="/Clean-Btn.png" alt="Clean Button" />
+        <h3>Clean</h2>
+      </div>
+    
+      <div class="sleep-btn-cont">
+        <input type="image" class="BtnEnergy" id="BtnEnergy" src="/Sleep-Btn.png" alt="Sleep Button" />
+        <h3>Sleep</h2>
+      </div>
+     
+    </div>
+  
+
+</div>
+
+    <!-- END SCREEN -->
+    <div class="endScreenContainer">
+
+        <img src="/Pet-Lost.png" class="lostScreenImg" id="lostScreenImage" alt="Ghost Pet" />
+
+        <img src="/GameOver.png" class="gameOverImg" id="gameOverImage" alt="Game Over"  />
+      
+      <h2 id="scoreText">0/12 Fragen korrekt</h2>
+
+      <button class="resultsBtn" id="resultsButton" type="button">Results</button>
+
+      <button class="playAgainBtn" id="playAgainButton" type="button">Play again</button>
+    </div>
+
+    <!-- WIN SCREEN -->
+    <div class="winScreenContainer">
+      <img class="winImage" id="winImage" src="/Win-Image.png" alt="You Won" width="auto" height="300"/>
+      <button class="playAgainBtnWin" id="playAgainButtonWin" type="button">Play again</button>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="resultsContainer">
+      <p class="resultDescriptionText">Here you can see all of your wrong answered<br>questions with the right answer:</p>
+
+      <div class="WrongQuestionText">
+        <div class="col-12">
+          <h1 id="result-question" class="result-question-text">What is the answer to this question?</h1>
+        </div>
+      </div>
+
+      <div class="ResultAnswers">
+        <div class="col-12">
+          <div class="result-answer-container card" id="resultAnswerContainer">
+            <p class="result-answer-prefix"></p>
+            <p class="result-answer-text" data-answer="a">Answer A</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ResultAnswers">
+        <div class="col-12">
+          <div class="result-answer-container card" id="resultAnswerContainer">
+            <p class="result-answer-prefix"></p>
+            <p class="result-answer-text" data-answer="b">Answer B</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ResultAnswers">
+        <div class="col-12">
+          <div class="result-answer-container card" id="resultAnswerContainer">
+            <p class="result-answer-prefix"></p>
+            <p class="result-answer-text" data-answer="c">Answer C</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ResultAnswers">
+        <div class="col-12">
+          <div class="result-answer-container card" id="resultAnswerContainer">
+            <p class="result-answer-prefix"></p>
+            <p class="result-answer-text" data-answer="d">Answer D</p>
+          </div>
+        </div>
+      </div>
+
+  
+      <div class="ButtonContainerResults">
+      <div class="ResultBtnContainer">
+      <button class="previousResultBtn" id="previousResultButton" type="button">Vorherige Frage</button>
+      <button class="nextResultBtn" id="nextResultButton" type="button">Nächste Frage</button>
+    </div>
+
+      <button class="backBtn" id="backButton" type="button">Zurück</button>
+    </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="endGameModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Game ended</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body">...</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" data-mdb-dismiss="modal" id="restart">
+            Restart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End your project here-->
+
+  <!-- MDB -->
+  <script type="./text/javascript" src="./js/mdb.min.js"></script>
+
+</body>
+
+</html>

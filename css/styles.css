@@ -1,0 +1,700 @@
+body,
+h1 {
+  font-weight: 700;
+  color:white;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 18px;
+}
+
+body{
+  background-color: #2a154a;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 12px;
+  color: white;
+}
+p{
+  text-align: center;
+}
+
+#intro {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 4px;
+}
+
+#introQuiz {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 4px;
+}
+
+.prefix {
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.4rem;
+}
+
+.titleImage{
+  margin-top:5%;
+}
+
+.character-picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.mode-picker{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#counter,
+#score,#timer {
+  text-align: center;
+  background-color: transparent;
+  color: white;
+}
+
+.counter{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+
+.questionNewTry{
+  color: #f8719a;
+  margin: 0;
+  padding: 0;
+}
+
+#counter, #countdown{
+  margin-bottom: 0;
+}
+
+.needBars{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+}
+
+progress {
+  border: none;
+  width: 325px;
+  height: 15px;
+  background: white;
+  border-radius:100px;
+  vertical-align:sub;
+  margin-left: -10px;
+  z-index: 0;
+  
+}
+
+.hunger{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+
+.hungerIcon{
+  z-index: 999;
+}
+
+.fun{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+
+.funIcon{
+  z-index: 999;
+}
+
+.hygiene{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+
+.hygieneIcon{
+  z-index: 999;
+}
+
+.energy{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+}
+
+.energyIcon{
+  z-index: 999;
+}
+
+progress::-webkit-progress-value {
+  background: #FF9BCA;
+  border-radius: 100px;
+}
+
+progress::-webkit-progress-bar {
+  background: white;
+  border-radius: 100px;
+}
+
+.petNameOutput{
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.saveBtn{
+  background-color: #FF9BCA;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  height: 20px;
+  width: 50px;
+  font-weight: 700;
+  font-size: 12px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.question-holder {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.question-holder-row{
+  border-radius: 8px;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.33);
+  width: 100%;
+}
+
+
+
+#question{
+  margin-bottom: 0;
+}
+
+.answers-box1{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.answers-box2{
+  display: flex;
+  width: 100%;
+}
+
+.answer-container, .result-answer-container {
+  display: flex;
+  flex-direction: initial;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  background-color: #A7ADF1;
+  border: 1px solid white;
+  border-radius: 30px;
+  border-color: white;
+  cursor: pointer;
+  width: 90%;
+  align-self: center;
+}
+
+.answer-container.card{
+margin: 0;
+}
+
+.answer-prefix, .result-answer-prefix {
+  background-color: #ffffff;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.answer-text, .result-answer-text {
+  padding: 0.8rem;
+  width: 100%;
+  margin: 0;
+  color: white;
+  text-align: center;
+  
+}
+
+.correct, .incorrect{
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  transform: translateY(-0.1rem);
+  transition: transform 200ms;
+}
+
+.row{
+  width: 100%;
+}
+
+.correct{
+  background-color: #7FE39B;
+}
+
+.incorrect {
+  background-color: #FF8E9E;
+}
+
+.result-answer-text{
+  color: white;
+}
+
+.selectedElementText{
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.overlay-card { 
+  z-index: 9;
+  color: white;
+  width:100%;
+  height: 100%;
+  flex-direction:column-reverse;
+  justify-content: flex-end;
+}
+
+.card-img-top {
+  width: 310px;
+  height: auto;
+  align-self: flex-end;
+}
+
+.loseTime{
+  color: #f8719a;
+}
+
+
+
+.card-title {
+  text-align: center;
+}
+
+.card-text {
+  text-align: center;
+}
+
+#shotglass1, #shotglass2, #shotglass3 {
+  height: 32px;
+}
+
+body {
+  background-image: url('/Background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#countdown {
+  background-color: transparent;
+  color: white;
+}
+
+#countdownSurvive {
+  background-color: transparent;
+  color: white;
+margin-bottom: 0;
+align-self: auto;
+margin-top: 4px;
+}
+
+
+#question {
+  background-color: transparent;
+  color: white;
+}
+
+.my-5{
+  margin-top: 0 !important;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  background-color: #2a154a;
+  width: 112%;
+}
+
+.headerImage {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 11rem;
+  align-self: center;
+}
+
+.startBtn{
+  width: 100%;
+  background-color: #45e7ed;
+  border: none;
+  border-radius: 12px;
+  color: #2A1A4E;
+  height: 51px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.descriptionBtn{
+  background-color: #FF9BCA;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  height: 25px;
+  width: 90px;
+  font-weight: 700;
+  font-size: 12px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.confirmBtn{
+
+  background-color: #6CF5C2;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  height: 40px;
+  width: 110px;
+  font-weight: 700;
+  font-size: 20px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.BtnLoad{
+  background-color: #FF9BCA;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  height: 25px;
+  width: 90px;
+  font-weight: 700;
+  font-size: 12px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.backToStartScreen{
+  background-color: #FF9BCA;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  height: 35px;
+  font-weight: 700;
+  font-size: 16px;
+  width: 40%;
+  align-self: center;
+  margin-bottom: 20px;;
+}
+
+.resultsBtn, .copyBtn{
+  width: 90px;
+  background-color: #FF9BCA;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  height: 35px;
+  color: white;
+  font-size: 16px;
+  align-self: center;
+}
+
+.playAgainBtn, .playAgainBtnWin{
+  width: 140px;
+  background-color: #6CF5C2;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  align-self: center;
+}
+
+.backBtn, .nextResultBtn, .previousResultBtn{
+  background-color: #FF9BCA;
+  border-radius: 30px;
+  border: none;
+  font-weight: 700;
+  height: 37px;
+  color: white;
+  font-size: 14px;
+  width: 50%;
+  margin: 10px;
+  margin-top: 0;
+  align-self: center;
+}
+
+.backBtn{
+  background-color: #6CF5C2;
+}
+
+.ResultBtnContainer{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.resultDescriptionText{
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#result-question{
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 5px;
+  border-color: white;
+  background-color: rgba(0, 0, 0, 0.33);
+}
+
+.content{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+form {
+  width: 100%;
+  align-self: center;
+}
+
+input {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  border-color: white;
+  color: #A37DE0;
+  text-align: center;
+  height: 30px;
+}
+
+label{
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+#petName{
+  background: white;
+  width: 50%;
+}
+
+input[type=text]:focus{
+  outline: 2px solid #A37DE0;
+}
+
+.Survival-Mode-Icon{
+width: 90px;
+height: auto;
+border: none;
+}
+
+.Quiz-Mode-Icon{
+  width: 90px;
+  height: auto;
+  border: none;
+}
+
+.instructions{
+  width: 90%;
+  flex-direction: column;
+  display: none;
+  position: absolute;
+  margin-top: 20px;
+}
+
+.instructionsImage{
+    height:100%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.startScreenContainer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ justify-content: space-between;
+}
+
+#arrowLeft{
+  width: 40px;
+  height: auto;
+border: none;
+}
+
+#arrowRight{
+  width: 40px;
+  height: auto;
+transform: scale(-1);
+border: none;
+}
+
+.startscreen-buttons{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+
+}
+
+.winScreenContainer{
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.gameContainer{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.resultsContainer{
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.ButtonContainerResults{
+  margin-top: 10px;
+}
+.endScreenContainer{
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.lostScreenImg{
+  align-self: center;
+ opacity: 0.6;
+ width: auto;
+ height: 280px;
+}
+
+.drunkLost{
+ height: 100%;
+}
+
+.gameOverImg{
+  width: 340px;
+  height: auto;
+}
+
+.bubbles{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pressNeedText{
+  border-radius: 8px;
+  border: 1px solid white;
+  padding: 10px;
+  width: 60%;
+}
+
+.needs-button-holder{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.survival-mode-game{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+#BtnHunger{
+  border: none;
+  height: 70px;
+  width: auto;
+}
+
+#BtnFun{
+  border: none;
+  height: 70px;
+  width: auto;
+}
+
+#BtnHygiene{
+  border: none;
+  height: 70px;
+  width: auto;
+}
+
+#BtnEnergy{
+  border: none;
+  height: 70px;
+  width: auto;
+}

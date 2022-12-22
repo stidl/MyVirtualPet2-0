@@ -1,0 +1,110 @@
+[
+   {
+      "id":1,
+      "question":"The rice dish ‘paella’ comes from what country?",
+      "a":"Spain",
+      "b":"Greece",
+      "c":"Italy",
+      "d":"Portugal",
+      "answer":"a"
+   },
+   {
+      "id":2,
+      "question":"What is another name for maize?",
+      "a":"Tomato",
+      "b":"Corn",
+      "c":"Pea",
+      "d":"Chickpea",
+      "answer":"b"
+   },
+   {
+      "id":3,
+      "question":"Deer meat is known by what name?",
+      "a":"Veal",
+      "b":"Bison",
+      "c":"Venison",
+      "d":"Pheasant",
+      "answer":"c"
+   },
+   {
+      "id":4,
+      "question":"What product did Nintendo first start selling?",
+      "a":"Video Games",
+      "b":"Figurines",
+      "c":"Gaming Consoles",
+      "d":"Playing Cards",
+      "answer":"d"
+   },
+   {
+      "id":5,
+      "question":"What is the best selling game in the world?",
+      "a":"Pokemon",
+      "b":"Wii Sports",
+      "c":"Tetris",
+      "d":"Minecraft",
+      "answer":"d"
+   },
+   {
+      "id":6,
+      "question":"What is the highest-grossing arcade game of all time?",
+      "a":"Pac-Man",
+      "b":"Pong",
+      "c":"Space-Invaders",
+      "d":"Mortal Combat",
+      "answer":"a"
+   },
+   {
+      "id":7,
+      "question":"How long should you wash your hands?",
+      "a":"10 seconds",
+      "b":"20 seconds",
+      "c":"1 minute",
+      "d":"5 seconds",
+      "answer":"b"
+   },
+   {
+      "id":8,
+      "question":"What uses, on average, 26% of the water in a home?",
+      "a":"Shower",
+      "b":"Dishwasher",
+      "c":"Toilet flushing",
+      "d":"Bathing",
+      "answer":"c"
+   },
+   {
+      "id":9,
+      "question":"What is the smallest form of bacteria called?",
+      "a":"Spirilla",
+      "b":"Bacilli",
+      "c":"Vibrio",
+      "d":"Cocci",
+      "answer":"d"
+   },
+   {
+      "id":10,
+      "question":"Infants need about how many hours of sleep per day?",
+      "a":"12 hours",
+      "b":"10 hours",
+      "c":"20 hours",
+      "d":"16 hours",
+      "answer":"d"
+   },
+   {
+      "id":11,
+      "question":"How long does a complete sleep cycle take?",
+      "a":"100 minutes",
+      "b":"3 hours",
+      "c":"30 minutes",
+      "d":"2 hours",
+      "answer":"a"
+   },
+   {
+      "id":12,
+      "question":"Which of these will help promote better sleep?",
+      "a":"Exercising 2h before bedtime",
+      "b":"Reading or listening to music",
+      "c":"Changing bedtimes",
+      "d":"Having a late dinner",
+      "answer":"b"
+   }
+]
